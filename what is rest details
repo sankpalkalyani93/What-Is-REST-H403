@@ -1,0 +1,65 @@
+-> Representational State Transfer
+	-> a mechanism/ architectural style used to develop networked application
+	-> REST depends upon the HTTP protocol -> communication protocol, data transfer over web, stateless
+	-> The RESTful applications uses HTTP requests to perform the CRUD operations wrt the application over 	net
+	-> These operations can be identified over net using the URI(Uniform Resource Identifiers)
+
+-> Key principles : 
+	1. Stateless
+		-> Each request made to client will contain all the information required by the server 			to process the request.
+		-> On the other hand, server will not keep track/ store/ save the work by the client
+
+	2. Client-Server Architecture
+		-> The client and server are two separate entities which interacts with each other for 			data transfer/ information exchange/ any other sort of business communication etc.
+		-> This sort of separation allows for independent development, improvement and scaling 			of the application.
+
+	3. Cacheable
+		-> Responses from the server can be marked as cacheable or non-cacheable to improve the 			performance by reducing the number of client-server interaction.
+	
+	4. Uniform Interface
+		-> REST defines four interface constraints:
+		1. Identification of the Resource
+		2. Manipulation of the Resources through representation
+		3. Self-descriptive messages
+		4. Hypermedia as the Engine Of Application Sate(HATEOAS)
+	
+	5. Layered System
+		-> This architecture allows for an intermediary like a proxy server to improve 				scalability, security, encapsulation without the client being aware of any intermediary 			server. 
+	
+	6. Key components of REST: 
+		1. Resource	
+			-> Basically any information that can be named, such as a document, image, 				audio-video, temporal service, collection of resources - tabular information or 				any non-virtual object(Person, Product, Stock, Order, Customer)
+		
+		2. Resource Representation
+			-> Resources are represented usually in JSON/XML format 
+			-> They contain data as well as metadata about the resource
+
+		3. URI
+			-> Each resource is identified by a unique URI
+
+		4. HTTP Methods : 
+			-> RESTful services uses the following HTTP methods :
+			1. GET		:	Retrieving the resource		
+			2. POST		:	Create a new Resource
+			3. PUT		:	Update an existing Resource	
+			4. DELETE	:	Delete/ Remove an existing Resource
+			5. PATCH	:	Partially Update an existing Resource
+
+		5. HTTP Status code/ message : 
+			-> Status codes helps in indicating the result of an operation:		
+			1. 200 OK		-> Request was successful
+			2. 201 Created		-> A new resource created successfully
+			3. 204 No Content	-> Request was successful but there is no content for 							the request
+			4. 400 Bad Request	-> Request with invalid syntax not understandable by 							server
+			5. 401 Unauthorized	-> Client must be authenticated to get requested 							response
+			6. 403 Forbidden	-> Client does not have the rights to the specified 							content
+			7. 404 Not Found	-> Server could not find the requested resource.
+			8. 500 Internal Server Error -> The server encountered a situation about which 							it has no understanding and it doesn't know how to 							handle it.
+
+		Example : Resource -> Person
+		Restful APIS for person : 
+		1. GET/api/persons		:	Retrieve all persons
+		2. POST/api/persons		:	Create a new Persons
+		3. GET/api/persons/{id}		:	Retrieve a person by id
+		4. PUT/api/persons/{id}		:	Update a person by id
+		5. DELETE/api/persons/{id}	:	Remove a person by id
