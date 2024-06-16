@@ -1,0 +1,1923 @@
+// --------------------------10-Mar-2024 -----------------------
+-> Application/ Software
+	-> An application commonly refered to as a computer/ software program which is written/ designed/ developed/ build to perform specific tasks/ functionalities + they are based on electronic devices like pc's, laptops, smartphones, tablets, smart-televisions etc...
+	-> They are meant to serve variety of purposes in different contexts like education, healthcare, entertainment, gaming, increasing productivity at work, socializing sites etc...
+	-> advantages : 
+		-> less time consuming
+		-> more efficiently tasks can be carried out
+		-> more productive
+		-> less efforts/ labor
+ 
+	-> To develop a software/ web-application/ app we need some platform/ medium => language
+			C, C++, Java, .Net, Python, R, Php etc......
+
+
+Topic 1 : Introduction To Java : 
+a. History and Introduction:
+	-> Java is a popular high-level(User-friendly language like English), class-based OOP based 	programming language used to write application. 
+	-> Developed by Sun Microsystem in 1995, now a days owned by Oracle Corporation
+	-> It was developed by James Gosling, Patrick Naughton and team => Green Team
+	-> Originally developed for electronic davices like set-top boxes, television
+	-> currently very famous for developing web based applications
+	-> Earlier it was called as Oak -> but it was renamed as Java because Oak was already an established 	organization called as Oak Technologies. 
+
+b. Features of Java
+	-> Simple and easy to understand
+	-> Compiled and Interpreted
+		-> Compilation means converting the Java code into Intermediate code called as Bytecode
+			-> the compiler makes sure the code is syntactically correct(no syntax error)
+		-> Interpretation means generating the Machine code which can be directly executed
+			-> the interpreter executes code/ processes the whole code line by line.
+	-> Platform Independent Or Portable 
+		-> Java supports the feature of portability wherein java codes cab be easily moved from one 		computer system to another any where, without hampering the original java codes.
+		-> Even if there are changes/ updates on any underlying system, it will never affect the java 		codes/ programs
+		-> This reason makes java platform independent/ portable.
+	-> Object-Oriented 
+		-> Object : real-world element/ component/ item/ entity/ thing 
+		-> Any thing that has some properties and behvaiour = Object
+		-> example : Human, Fruits, Animal, Mobiles, Car, Bottles, Laptop, Marker, Fan, Table, Chair, 
+			BankAccount, PostAccount,..... 
+		-> Class : A template which is used to create objects.
+		-> This class will hold properties -> variables	and behaviour -> functions/ methods
+		-> Inheritance, Polymorphism, Abstraction, Encapsulation, Composition/ Aggregation/ 			Containment, Exception handling, Mutlithreading, File handling, Socket programming, Database 		Communication
+	-> Robust and Secure
+		-> Java is strong enough to handle breaches(java code -> bytecode which is neither understable 		by users nor machine)
+		-> Java provides the concept of exception handling 
+		-> Java is auto garbage-collected : refers to the automatic removal of resources from memory 		if not in use
+		-> Java does not support pointers.
+	-> High Performance
+		-> Wrt interpreted languages, java is high performing one. 
+		-> during execution java architectures reduces the overheads on conversion.
+		-> Also, multithreading helps in improving the execution speed of an application written in 		java.
+	-> Distributed : 
+		-> The ability of java application to run in distributed mode like multiple users on internet 		can access the application and make changes as per need.
+	-> Dynamic And Extensible
+		-> The ability to link in new classes, libraries, methods, objects make java dynamic
+		-> Java application can be enhanced with new features/ functionalities without hampering the 		existing ones.
+
+
+c. JVM : Java Virtual Machine
+	-> It provide the runtime environment to the java applications
+	-> Jvm converts the java code into bytecode
+	-> JVM is a part of JRE(Java Runtime Environment)
+	-> Firstly the java code is converted into bytecode
+	-> Then byte code is convtered into macahine code on different machines where jvm is installed.
+	-> JVM helps in memory allocation as well.
+
+d. JRE : Java Runtime Environment
+	-> It is a software layer which runs on the underlying operating system and provides the classes and 	libraries and other resourcess required to execute java codes/ applications.
+	-> This JRE assembles the java code created with the help of JDK, with the necessary libraries 	required to run the application on jvm. JRE creates an instance of the JVM to execute the respective 	code/ application.
+	-> JVM's are available for mulitple operarting systems, and program created with the JRE will run on 	all of them.
+	-> In this way, JRE enables a java program to run in any environment/ on any operating system without 	modification.
+	-> components of JRE : 
+
+			Compiler					Runtime
+									
+									
+			Hello.java					Class Loader
+			    |						     |	
+			    |						Bytecode Verifier
+			Hello.class	------------------->		     |		
+			(bytecode)					Interpreter
+									     |	
+									Runtime
+							                     |
+									Hardware
+	-> the following are important tasks : 
+		a. Loading
+		b. Verifying
+		c. Executing
+
+e. Java Installation- done
+		
+
+f. OOP concepts
+	-> class	:	template used to create objects
+	-> object	:	refers to an instance of a class	
+	-> inheritance	: 	inherting the properties and behaviour of one class into another
+	-> polymorphism	: 	ability to use same thing differently 
+	-> abstraction	: 	hiding the implementation details from end-user and providing only the 					functionality
+	-> encapsulation:	wrapping up of data and functions in a single unit
+	-> composition	: 	refering one class's object in another
+
+g. Simple Program
+
+scope/ availability/
+access
+modifier    template used to create a class
+   |        | 
+------ ------ ----|------- name Of the class
+public class Hello{
+			
+		    return type
+			|     
+		      ---- ------------------------------- driver/ executor function
+			|    |	
+      			|    |      |------------------------ string array alphanumeric 			|    |      | 			      data	
+	public static void main(String [] args){
+		System.out.println("Hello All...!");
+		   |    |    |---------------------------- method to write on console.
+		   |	|---- field/object/module
+	predefined class
+	}
+}
+
+
+task : 
+	1. Create a class which prints your BioData. 
+		Name: Kalyani Akash Dinde	
+		Course : Information Technology
+		Qualification : ME in Computer
+		Job : IT Vedant (current)
+		City : Nashik
+		State: Maharashtra
+		Language: Marathi, Hindi, English
+		Date Of Birth: 4-Jan-1993
+		Is Married: Yes
+		
+
+////////// -------------------------- 16-March-2024 ----------------------
+Topic 2 : Variables, Datatypes
+1. Data types	:	
+	-> Type of Data which can be created in an application. 
+	-> This will tell the variables what data they can hold.
+	-> Two categories of datatypes:
+				|
+	-------------------------------------------------
+	|						|
+Primitive Datatypes				Reference Datatypes
+	|						|
+holds very basic data				hold references/ memory addresses		
+value/actual data value				of objects, no actual value stored
+	|						|
+-byte	8-bit unsigned integer			-classes
+-short	16-bit unsigned integer			-arrays
+-int	32-bit unsigned integer			-interfaces
+-long	64-bit unsigned integer			-Strings
+-float	32-bit floating point numbers
+-double	64-bit floating point numbers
+-char	16-bit unicode character
+-boolean true/ false
+
+2. Variables
+	-> A variable is a named memory location where specific value(as per the datatype) is stored.
+	-> example :	to store name of an employee 	-> name
+			to store age of an employee	-> age
+
+	-> how to create the variable : 
+		syntax : 
+		
+		datatype variableName;			without value assignment
+		variableName = value;
+
+		datatype variableName = value;	 	with value assignment
+		
+		
+		Name: Kalyani Akash Dinde	
+		Course : Information Technology
+		Qualification : ME in Computer
+		Job : IT Vedant (current)
+		City : Nashik
+		State: Maharashtra
+		Language: Marathi, Hindi, English
+		Date Of Birth: 4-Jan-1993
+		Is Married: Yes
+
+	-> Variables for BioData:
+
+		String name = "Kalyani Akash Dinde";
+		String course = "Information Technology";
+		String qualifiaction = "ME-Computer";
+		String job = "IT Vedant";
+		String city = "Nashik";
+		String state = "Maharashtra";
+		String language1 = "Marathi";
+		String language2 = "Hindi";
+		String language3 = "English";
+		String dob = "$-Jan-1993";
+		int age = 30;
+		long phoneNumber = 7718995794;
+		boolean isMarried = true;
+
+	**** Variation of 
+			System.out.println("Message " + valueForMessage);
+
+	example 1 : Biodat with variables and datatypes
+	example 2 : Addition of two numbers
+
+	
+
+3. Typecasting/ Type Conversion: 
+	-> Refers to the process of converting/ casting a variable of one type into another type
+	-> Two ways in which casting can be performed:
+					|
+	-----------------------------------------------------------------
+	|								|
+Implicit Type Casting						Explicit Type Casting
+When the smaller data type is converted				When the larger data type is converted	
+into larger data type, called as implicit			into smaller type, is called as explicit
+type casting/ conversion.					type conversion/casting.
+
+Performed automatically by the compiler				Performed manually by the programmer
+
+No data is lost							Part of original data is lost
+
+also called as widening conversion				also called as narrowing conversion
+
+example : 							example : 
+	
+int num = 100;							double num3 = 100.25d;
+double num2 = num;						int num4 = num3;
+
+
+4. Constants : 
+	-> A constant is a variable whose value cannot be changed once it is assigned.
+	-> Their values remain same throughout the program.
+	-> example value of pi = 3.14f;
+	-> To create a constant variable we need to declare it with final keyword.
+		example : final double pi = 3.14; 
+
+5. Comments : 
+	-> refers to lines which are meant for understanding and not to be executed.
+	-> single line comment -> //  ----------- line of code --------------
+	-> multiline comments -> /* 
+				-------------- line of code ------------
+				*/
+
+6. Literals = values	
+	-> refers to the notation used to represent fixed values/ direct/ default in the program. 
+	-> these values are direct data values assigned to variables.
+	-> example : 
+		String name = "kalyani"
+		String city;			// we are accepting city value from user
+		int age = 30;
+		final float pi = 3.14f; 
+
+7. Identifiers:
+	-> refers to the names given to elements(variables, constants, functions, classes, objects, 	interfaces, packages) used in program by the programmer
+	-> myVariable
+	-> MyVariable
+
+8. Command Line arguments :
+	-> refers to the values that are passed to the main function's String args[], when called for 	execution.
+
+9. Examples 
+	for students : 
+	1. Write a program to display area of rectangle. 
+	2. ⁠Write a program to calculate subtration of three numbers.
+	3. ⁠Write a program to print cube of a number. 
+	4. ⁠Write a program to swap value of x = 5 with value of y = 6.
+
+//////////////// ----------------------- 17-March-2024 ------------------------
+Topic 3: Operators & Tokens
+-> Operator : 	-> symbol which represents a specific functionality
+		-> example + => concatenation operator and addition operator
+
+1. Arithmetic Operators
+	-> +, -, *, /, % etc
+
+	-> task : 	1. Calculate circumference/perimeter of circle
+			2. Volume of sphere
+			3. Convert temperature in celsius to farenheit.
+
+2. Relational Operators
+	-> <, >, <=, >=, !=, ==
+	
+3. Bitwise Operators
+	-> bitwise-&, bitwise-|, ex-or
+	-> 3 & 2
+					8	4	2	1
+binary representation	3		0	0	1	1	
+
+			2		0	0	1	0
+		&	----------------------------------------------------
+					0	0	1	0	-> 2
+			----------------------------------------------------
+
+
+	-> 3 | 2
+
+					8	4	2	1
+binary representation	3		0	0	1	1	
+
+			2		0	0	1	0
+		|	----------------------------------------------------
+					0	0	1	1	-> 3
+			----------------------------------------------------
+
+	-> 3 ! 2
+
+					8	4	2	1
+binary representation	3		0	0	1	1	
+
+			2		0	0	1	0
+		^	----------------------------------------------------
+					0	0	0	1	-> 1							----------------------------------------------------
+	
+	task : 
+		4&7
+		7&8
+		3^9
+
+4. Logical Operators
+	-> &&, ||, !
+
+	truth table of &&			truth table of ||
+
+	c1	c2	r			c1	c2	r
+	t	f	f			t	f	t
+	f	t	f			f	t	t
+	f	f	f			f	f	f
+	t	t	t			t	t	t
+
+
+5. Ternary Operator
+	-> ?:
+	-> used to compare things/conditions and generate either true or false results.
+	-> syntax : 
+		
+	(Result) = (conditionToTest) ? true : false;
+
+		
+6. Assignment Operators
+	-> +=, -=, *=, /=, %= etc
+
+7. Unary Operator
+	-> Operators which works on single operand/ variable
+	-> unary plus/ unary minus
+	-> increment/decrement
+	-> Logical !
+	-> Cast (type)variable
+	-> boolean negation ! -> !valid;
+
+8. Operator Precedence in Java
+
+///////// --------------------- 23-March-2024 -----------------------
+Topic 4: Conditional Statements And Looping Statements
+	1. Conditional Statements : refers to mechanism which allows us to manage the flow/ 	control the flow of application.
+	-> It makes us execute a particular functionality based on certainn conditions.
+	-> Like wise what not to execute can also be decided on the basis of certain condition 	specified.
+	-> based on evaluation of conditions to either true or false
+	-> java provides us with following conditional statements:
+		a. if
+			syntax:
+		
+			if(conditionToTest){	--------> true	/	false	
+				// logic   ----------------|		|
+			}						|
+			out of if --------------------------------------|
+
+		b. if else
+			syntax:
+			
+			if(conditionToTest){	--------> true	/	false	
+				// logic   ----------------|		|
+			}						|
+			else   { ---------------------------------------|
+				// logic when condition is false
+			}
+
+
+Task : 
+	1. WAP to check if a number is positive or negative.
+	2. WAP to check if a character is vowel or consonant.
+	3. WAP to find the largest number of three.
+
+
+///////////////// --------------------- 24-March-2024 -----------------
+
+		c. nested if
+			-> if within if
+			-> inorder to execute the internal if, it is compulsory that the outer 			if is evaluated to true.				
+			->
+				if(condition1){
+					//logic for outer if
+
+					if(condition2){
+						// logic for inner if
+
+					}
+					else{
+
+					}
+					
+				}
+				else{
+
+				}
+		example : 
+			devise a mechanism to implement driving license scenario.
+			where age must be greater than or equals to 18.
+			and marks obtained in the exam are above 12. (out of 30)
+
+		d. else if ladder
+			-> ladder like mechanism where multiple conditions are provided, of 			which only one will execute at time.
+
+		e. switch case :
+			-> which consists of a variable and based on that variable value 			match, multiple logics can be devised.
+			-> syntax : 
+
+				switch(variable){
+
+					case 1:
+						break;
+					case 2:
+						break;
+					case 3:
+						break;
+					case 4:
+						break;
+					.
+					.
+					case-n:
+						break;
+					default:
+						when no match found
+				}
+	
+	2. Looping Statements:	
+	-> Refers to mechanism which allows us to execute a particular functionality for a 	given period of time.
+	-> every loop consists of following 4 parts:
+		1. loop variable: a variable which drives the loop having start point
+		2. termination condition: stop point
+		3. logic for loop
+		4. iteration/ gaps	
+
+		suppose start = 1
+			stop = 10
+			iteration/gap = +1, +2, +3 
+		1	2	3	4	5	6	7	8	9	10
+		1	3	5	7	9
+		1	4	7	10
+
+	-> INORDER TO PERFORM A TASK repetitively for a given period of time
+
+	->java provides following looping statements:
+		a. for	
+		-> syntax : 
+			initialization		 termination		
+				1---------------------> 2 <--------------- 4<-----------|
+							|		   |		|
+			for(loop_variable_start; termination_condition; iteration){	|
+							|				|
+				logic_for_loop; <-------|				|
+							3------------------------------>|
+			}
+
+	task : to print hello 10 times
+	
+	for(int i = 1; i <= 10; i=i+1){
+		syso("Hello")
+	}
+	
+	i = 1		i <= 10		logic			i = i+1
+			1 <= 10		Hello			i = 1+1 = 2
+			2 <= 10		Hello			i = 2+1 = 3
+			3 <= 10		Hello			i = 3+1 = 4
+			4 <= 10		Hello			i = 4+1 = 5	
+
+
+			9 <= 10		Hello			i = 9+1 = 10
+			10 <= 10	Hello			i = 10+1 = 11
+			11 <= 10    Out of loop/ loop terminates
+
+
+	task : print first 50 even numbers.
+	task : print summation of first-n numbers.
+
+////////////// ---------------------- 30-March-2024 -----------------------
+	task : Find reverse of a given number
+		-> num = 1234
+		reversedNum = 4321
+
+		1. decompose the num into separate bits 1, 2, 3, 4
+			%	-> find demonintors = the bits
+			/	-> perform to decompose the number
+
+			 123
+			-------
+		      10|1234
+			 10
+			------
+			  23
+			  20
+			------
+			   34
+			   30
+			 ------
+			    4			------	rem
+
+
+			 123			------ num
+			-------
+		      10|1234
+			 10
+			------
+			  23
+			  20
+			------
+			   34
+			   30
+			 ------
+			    4	
+		2. recompose the reparated bits
+		
+		revseredNum = reversedNum * 10 + rem
+			    = 0 * 10 + 4 = 4
+			    = 4 * 10 + 3
+			    = 43
+			    = 43 * 10 + 2
+			    = 432
+			    = 432 * 10 + 1
+		            = 4321 
+	
+
+	task : Find whether a number is palindrome or not
+		-> num = 1234321
+		   reversedNum = 1234321
+	task for students : 
+		1. find whether a string is palindrome or not
+ 		2. find fibonacci series till limit specified by user.
+
+
+		b. while	
+			-> entry control loop
+			-> syntax : 
+				
+				initialization;
+				while(terminationCondition){
+
+					// logic to repeat
+
+					interation;
+				}
+		example : factorial of a number
+			num = 5
+			fact = 5*4*3*2*1
+		
+		c. do while
+			-> exit control loop
+			-> syntax :
+
+				initialization;
+				do{
+					// logic to repeat;
+					
+					iteration;
+				}while(terminationCondition);
+				
+////////////// ------------------ 31-March-2024 ------------------------
+Topic 5: Arrays
+5.1 Declaring and Initialization of Array
+	-> What is an array?
+		-> An array is a collection of homogeneous elements/ similar type of elements
+		-> these elements are arranged in continuous memory location
+		-> they are stored under on variable name
+		-> array starts with 0
+		-> array ends with n-1
+		-> array is index based
+		-> we can access each element of array using these indices.
+
+		-> example : 
+		n = 5		-------------------------------------------
+		num[]	=	|	10|	20|	30|	40|	50|
+				-------------------------------------------
+					0	1	2	3	4
+		-> array is fixed size
+
+	-> declaration of array:
+		1. new keyword
+			datatype[] arrayName = new datatype[size];
+			int[] num = new int[5];		
+
+		2. array initializer
+			datatype[] arrayName = {element, element2, ...., element-n};
+			int[] num = {10, 20, 30, 40, 50};
+
+5.2 Accessing Array elements
+	-> two ways using which we can access the array elements:
+		1. by using index of array individually - one by one
+			-> num[0], num[1], num[2], num[3], num[4]
+
+		2. using for loop to traverse the whoile array
+			-> for(int index = 0; index < 5; index=index+1){
+				System.out.println(num[index]);
+			   }
+
+5.3 Iterations over array
+	-> Enhanced for loops used to retrieve elements from array
+	-> enhanced for loop was introduced in java 5
+	-> syntax: 
+		
+		for(elementReferenceToarray : arrayName){
+			// logic to repeat
+		}
+	
+
+5.4 Logical programs on array
+	tasks:
+	1. Calculate total of array elements
+	2. Calculate average of array elements
+	3. find an array element
+		-> by value
+		-> by index	-> student		
+	3. update an array element
+		-> by value	-> student
+		-> by index
+	4. delete an array element
+		-> by value	-> student
+		-> by index	-> student
+	5. sort the array elements
+
+			j
+		i	11, 10, 15, 14, 12
+
+	6. copy array elements
+
+
+//////////// ----------------- 6-April-2024 -------------------
+5.5 Multidimensional array
+	-> An arrangement of data in tabular/ matrix manner
+	-> it is a collection of mutiple rows and columns 
+	-> m*n
+	-> m represents rows, n represents columns
+	-> example a 2 dimensional matrix as shown below:
+
+			c1	c2
+		r1	1	2	
+
+		r2	3	4
+
+	-> declaration of a two dimensional array:
+
+		int[][] matrix1 = new int[2][2];
+
+		or
+		
+		int[][] matrxi2 = 	{
+					 {1, 2},
+					 {3, 4}
+					}
+
+	-> nested for to initialize a two dimensional array
+	-> where outer for = rows
+	-> inner for = columns
+
+
+	-> example inserting elements to matrix1:
+
+		for(int row = 1; row <= 2; row++){
+
+			System.out.println();
+			for(int col = 1; col <= 2; col++){
+			
+				System.out.println("Enter value for rowcol : " + rowcol + " position : ");
+				matrix1[row][col] = scan.nextInt();
+			}	
+		
+		}
+
+
+	-> task perform subtraction of matrix elements. Make use of three dimensional matrix.
+
+
+Topic 6: OOPS - Classes & Objects In-Depth
+6.1: Classes & Object
+	-> Class is a blueprint/ template/ group/ collection of properties and behaviour.
+	-> Also contains other class
+	-> Also contains objects
+	-> Also contains constructors/ destructors 
+	-> properties = variables = data members
+	-> behaviuor = functions = methods = member functions
+
+	-> Person -> read()/write()/ sing()/ walk() etc
+	     |
+	     |
+	  name, gender, age, nationality, email, contact, address
+
+	-> Objects : refers to instance/ representation of a class
+	-> how to create class and objects: 
+		-> syntax:
+
+			class ClassName{
+				
+				// variables;
+				// constants;
+				// static fields;
+				// constructors;
+				// methods;
+				// objects
+				// class {} 
+			}
+
+		-> creating objects : 
+							
+						    constructor of the class	
+							|
+			ClassName objectName = new ClassName();
+			   |		|    |  |
+		name of the class   name of  |  |
+				    object   | memory allocation operator
+                                             |
+					assignment 
+					operator
+
+		
+6.2 : Methods - Passing parameters to methods, return type
+	-> methods can have parameters(variables) and also they can return some value.
+	-> there are four ways to create methods : 
+		1. No return type + No Parameter
+		2. No return type + Parameter
+		3. Returntype + No Parameter
+		4. Returntype + Parameter
+
+	-> syntax of method : 
+
+       scope of method   void/any-datatype
+		|            |           
+		|	     |         |------------------------ name of Method
+	accessmodifier return9type methodName(parameters){
+		// logic for method		 |-------------- variables on which method can work
+	}
+
+
+//////////// --------------- 7-April-2024 ---------------------
+6.3 : Object as parameters, Constructors & Destructor
+	-> just like variables we can pass objects as parameters to a method. 
+	-> Constructor refers to a special method used to create/ instantiate object of a class.
+	-> Its name is same as class name.
+	-> It will not have any returntype.
+
+	-> There are two types of constructors:
+		1. Default/ no-arg/ no-paremeter constructor
+		2. Parameterized construtor
+
+	-> using object as parameter in constructor
+
+6.4 : Access & Non-Access Modifiers:
+	-> Modifier : it tells the scope of variable/ method/ constructor/ class/ interface etc
+	-> Following are four types of access-modifiers : 
+		1. default	:	basically when no modifier is provided to variavle/ method/ class 					system considers it of type default
+					no default keyword required
+					accessibility : within package, multiple class
+		2. public	: 	if something is mentioned as public, it simply means its 						accessibility/ 	visibility is global in nature.
+					keyword used is public
+					accessibility: everywhere/ global/ within package/ outside package 
+
+		3. protected	:	we can access these type of variables/ methods within subclasses.
+
+		4. private	: 	if something is declared as private, it means its scope is limited
+					the keyword used is private
+					accessibility: within class only. 
+
+	-> the scope means visibility/ accessibility of a variable / method.
+	
+	-> Non-Access Modifiers : 
+		1. static	:	it is used to create one copy for all the instances.
+		2. final	:	refers to constant type of values
+		3. abstract	:	if something is abstract it simply means it is not completely 						defined.
+
+6.5 : Packages and Class Hierarchy
+	-> package refers to folders 
+	-> conduct examples for packages with the help of access modifiers .
+	-> class hierarchy = inheritance = reusing the properties + behaviour of existing class into new 					   class.
+
+
+6.6 : Dynamic memory allocation, Garbage collection and finalize()
+	-> DMA : 
+		-> Heap space in Java is used for dynamic memory allocation for the java objects and stack 		memory for JRE classes loading at runtime.
+		-> New objects are always created inside the heap space where as the references to the 			objects are stored in stack memory space.
+		-> Objects have a global access and can be accessed from anywhere in the applciation.
+
+	
+	Program						stack				heap
+
+Person p1 = new Person(); 				reference to p1  ----------->	p1 object + 												prop+methods
+Person p2 = new Person();								p2
+Person p3 = new Person();								p3
+Person p4 = new Person();								p4
+
+	-> Garbage collection:
+		-> Refers to the process of automatically freeing up the heap space occupied by objects 		which are no longer in use. 
+		-> As the objects resides in heap memory, there is garbage collector which cleans up the 		heap space as much as possible by finding and removing the objects that are not used.
+		-> JVM automatically determines the memory objects/ memory no longer in use so that it can 		free up the space/ recycle the memory for other purposes.
+		-> When we run/ execute a program the JVM in the backend executes the gc() -> garbage 			collector method for removing the unused references of objects from the memory.
+	
+	-> finalize() :
+		-> This method is available from the java.lang.Object.finalize() <- called by the garbage 		collector( gc() ) when objects have been identified/ determined which are no longer used/ 		refered.
+		-> Our classes overrides the finalize() to dispose a system resource or objects and performs 		cleanup of memory space.
+
+6.7 : Object Class, Import statement, Built-in packages, User defined packages
+	-> Object class : 
+		-> rootmost class for all the classes be it predefined or user-defined class
+		-> Object is the superclass for all the classes.
+		-> it provides following methods: 
+			1. equals()
+			2. hashcode()
+			3. toString()
+			4. finalize()
+			5. getClass()
+			6. clone()
+
+	-> Import Statement : 
+		-> import is used to make classes and packages in an application interact with each other.
+		-> suppose a current class wants to access the classes of another package, it can be dome by 		importing those classes from that packge.
+		-> importing a single class :
+			import java.util.Scanner;
+		-> import everytihing from a package:
+			import java.util.*;
+	
+	-> Built-in Packages:
+		-> the JDK provides us with a lot of pre defined packages containing classes and interfaces 		for common programming.
+		-> pre-defined packages = built-in packages.
+		-> examples:
+			java.util, java.awt, java.lang, java.io, java.net, java.sql etc
+
+	-> User-defined packages :
+		-> Refer to the packages created by develoeprs for their respective programming application.
+		-> example :
+			com.firstpackage;
+				|
+			    Hello
+			    BioData
+			    Addition
+			    FibonacciSeries etc
+
+6.8 : Nested & Anonymous Class
+	-> Nested class refers to a class within class 
+	-> Anonymous class also refers to nesting of classes but without explicitly naming a class
+
+6.9 : var-args: 
+
+/////////// ----------------- 13-April-2024 ----------------------
+Topic 7 : OOPS - Abstraction, Inheritance & Polymorphism
+7.1 What is Inheritance?
+	-> The property by virtue of which a newly created class acquires properties and behaviour of an 	existing class.
+	-> The newly created class will also have its own properties and behaviour.
+	-> Existing class = Parent/ Super/ Root/ Base
+	-> Newly created class = Child/ Sub/ Leaf/ Derived
+	-> With the help of extends keyword, inheritance in java is achieved.
+	-> syntax :
+
+		class Parent{
+			// variables
+			// methods
+		}
+
+		class Child extends Parent{
+			// child-varibales
+			// child-methods
+		}
+	
+7.2 Types of Inheritance
+	-> Single-Level	:	
+					Parent hello()
+					  |
+					Child1
+
+	-> Multi-Level :
+					Parent1	hello()
+					   |
+					Parent2
+					   |
+					Child1	
+	
+	-> Hierarchical :
+					Parent	hello()
+					   |
+				  |---------------|
+				Child1		Child2
+
+	-> Multiple:
+				Parent1		Parent2
+			hello()	  |		  |    hello()		: state of ambiguity
+				  -------|---------
+				       Child1	
+		-> NOT possible in java : 
+
+
+7.3 Why we use Inheritance
+	-> Reuasbility of codes from existing classes.
+
+7.4 Method Overriding
+	-> Refers to over writing the methods of parent class in child class. 
+
+
+7.5 Method Overloading
+	-> refers to the process where same name methods can be utilized for different purposes.
+	-> In order to make every same name method different we will follow certain rules:
+		-> make differences in the parameters
+			1. count of parameters can be different
+			2. sequence of parameters can be different
+			3. Different dataype as parameters
+
+7.6 Polymorphism:
+	-> using same name methods for different purposes. 
+	-> same name + many forms
+	-> with method overloading = compile time polymorphism = early binding
+	-> method overriding = runtime polymorphism = late binding
+
+///////////// ------------------- 14-April-2024 ----------------------------
+7.7 Abstract Classes:
+	-> The process of hiding internal implemntation details from enduser and giving functionality to 	them is called as abstraction.
+	-> Inorder to achieve abstraction, java provides us with following approaches : 
+		1. abstract classes
+		2. interfaces
+	-> Abstract class : refers to the classes which have abstract methods and concrete methods.
+	-> for abstraction keyword used is abstract.
+	-> here, the methods will be incomplete, only method prototype is given. 
+	-> The child classes are supposed to provide logic for the empty methods in parent class.	
+
+7.8 Interfaces
+	-> Interfaces are very much like classes but they contain only abstract methods. 
+	-> we need to implement these methods in the classes.
+	-> keyword = implements
+
+
+/////////////// ------------------ 20-April-2024 ------------------
+7.9 default, static and private methods in interface
+	-> after java 8 we can add default, static, private methods inside an interface.
+	-> these methods contains logic. 
+
+Topic 8 : Strings
+	-> Sequence of characters(alphabets/ numbers/ special symbols)
+	-> also an array of characters
+	-> String is a class in java
+	-> It represents alphanumeric data/ textual data
+	-> String are declared with double quotes
+
+8.1 : Various ways to create String in Java
+	-> String objects can be created by following ways in java : 
+		1. using the literal way
+		2. using new keyword
+
+	-> example : 
+		1. using literal way: 
+			String name = "kalyani";
+			String city = "nashik";
+		2. using new keyword:
+			String name = new String("kalyani");
+			String city = new String("nashik");
+
+	-> String name = "kalyani"
+		|
+		|==> array of characters	=> char[] name = {'k', 'a', 'l', 'y', 'a', 'n', 'i'};
+
+	-> String memory management:
+		1. When we create a string using literal way then the data is stored in string constant pool
+		2. When we create a string using new keyword then the data is stored in heap memory
+		3. The String constant pool lies inside the heap memory
+
+						Java Heap Memory
+					|-------------------------------|
+					|				|				
+String s1 = "hello"; -------------------|------>|"hello"|		|	
+String s2 = "hello"; -------------------|----------|			|
+					|	String Constant Pool	|
+String s3 = new String("hello");	|				|
+		|			|				|
+		|			|				|
+		|-----------------------|---------> "hello"		|
+					|-------------------------------|				
+
+
+	-> Strings are immutable : 
+		-> String is immutable in nature which means that once a string is created, that object can 		not be changed
+		-> If we try to  change a string object then it creates a new object instead of changing the 		current object value.
+		-> the reference of the current object changes to new object.
+
+8.2 : In-built String functions
+	1. equals()
+	2. substring()
+	3. concat()
+	4. replace()
+	5. contains()
+	6. length()
+	7. split()
+ 
+8.3 : StringBuffer and 8.4 : StringBuilder
+	-> We have StringBuffer and StringBuilder classes to support mutability to the Textual data.
+	-> StringBuilder and StringBuffer are classes from java.lang package.
+	-> Only one thread/ user can access the string resource at a time.
+	-> Most common method by these two classes is append()
+
+task : Difference between String, StringBuffer & StringBuilder
+
+8.5 : Logical Programs on Strings
+	1. WAP to find the length of string without using length property.
+	2. Find the number of vowels in given string.
+
+////////// ------------------- 21-April-2024 --------------------
+	3. WAP to find the number of times a particular character is occurring in given string.
+	4. WAP to check whether given strings are anagrams.
+ 	5. WAP to check whether a string given is palindrome or not.
+	-> MADAM
+
+Topic 9 : Exception Handling
+				  
+			refering to main function        represents the class of Exception
+				 |				|
+	-> Exception in thread "main" java.lang.ArithmeticException: / by zero
+	at com.example.ExceptionsDemo1.main(ExceptionsDemo1.java:10)
+			|				     |
+		represents the path of exception	line of exception
+	-> Errors = Exceptions
+
+9.1 : What is Exception and Handling an Exception
+	-> Exception : An exception is a situation where the programs' execution is abnormally terminated.
+	-> The normal flow of the application/ program disrupts.
+	-> Exceptions usually occurs at runtime.
+	-> The mechanism to handle runtime exceptions is nothing but exception handling.
+	-> For this we can use the combinations of following things : 
+		1. try
+		2. catch
+		3. finally
+		4. throw
+		5. throws
+	-> Simple Exception hierarchy :	
+					
+						Object
+					          |
+					       Exception
+			__________________________|______________________________
+			|							|
+		PreDefined Exception					User-Defined Exception
+	________________|________________					|
+	|				|				InvalidEmailException		
+Checked Exception		Unchecked Exception			InvalidAgeException
+(read during the time		(read during the time 
+of compilation)			of execution)
+(checked by compiler)		(mostly checked by 
+	|			interpreter)
+	|				|
+ClassNotFoundException		ArithmeticException
+FileNotFoundException		ArrayIndexOutOfBoundsException
+IOException			NullPointerException
+					
+
+9.2 : Compile time errors & Run time errors
+
+	Compile Time Errors		Runtime Errors
+		|				|
+	Checked Exception		Unchecked Exception	
+	(read during the time		(read during the time 
+	of compilation)			of execution)
+	(checked by compiler)		(mostly checked by 
+		|			interpreter)
+		|				|
+	ClassNotFoundException		ArithmeticException
+	FileNotFoundException		ArrayIndexOutOfBoundsException
+	IOException			NullPointerException
+
+
+9.3 : try...catch...finally
+	-> syntax : 
+		
+		try{
+			// statement to observe where we can find an error
+				|
+		}catch(Exception ex){
+			// way to handle exception -> bypass it or give some logic
+		}
+
+	-> Multiple catch block done
+	-> try catch finally 
+		where finally works :
+			1. if there is error
+
+		int num = 10, den = 0, result = 0;
+		
+		try {
+			result = num /den;
+		}/*catch(Exception ex) {
+			ex.printStackTrace();
+		}*/finally {
+			System.out.println("Hello from finally");
+		}
+		
+
+			2. if there is no error
+
+
+		int num = 10, den = 0, result = 0;
+		
+		try {
+			result = num /den;
+		}/*catch(Exception ex) {
+			ex.printStackTrace();
+		}*/finally {
+			System.out.println("Hello from finally");
+		}
+
+
+			3. if the error is handeled
+		
+		int num = 10, den = 0, result = 0;
+		
+		try {
+			result = num /den;
+		}catch(Exception ex) {
+			ex.printStackTrace();
+		}finally {
+			System.out.println("Hello from finally");
+		}
+
+////////////// -------------------- 27-April-2024 ----------------------
+9.4 : throw & throws keywords
+	1. throw
+		-> is used to intentionally throw an exception
+		-> example : 
+
+			throw new Exception("The error message")
+
+	2. throws
+		-> used in method signature to tell the developer/ user that the method might throw an exception 		of specified type.
+		-> example : 
+
+			public void isEligible(int age) throws Exception{
+
+			}
+
+9.5 : User Defined Exception
+	-> exceptions created by the developer to handle  the exceptions that might be raised in the application 	being developed and which are not mentioned in the development kit or arenot predefined.
+	-> User defined exceptions are extended by Exception.
+
+
+Topic 10 : File Handling & IO
+	-> files refers named memor locations required for unstructured storage of data
+	-> data is usually stored in binary or text format
+	-> way of storing data permanently.
+	-> File handling refers to reading from or writing to files using the java.io package
+
+10.1 : FileInputStream & FileOutputStream
+	-> FileInputStream : class used to read data from a file
+	-> FileOutputStream : class used to write data to a file
+	-> the data will be read/written in byte format
+
+10.2 : FileReader & FileWriter
+	-> FileReader : class is used to read data from file in character format
+	-> FileWriter : class is used to write data to a file in character format 
+	
+//////////// -------------------- 28-April-2024 -------------------
+10.3 : Serialization And Deserialization 
+	-> Serialization is the process of converting the state of an object into byte stream.
+	-> Deserialization is the prcess of converting the byte into actual java object.
+	-> To make an object serializable we need to implement the java.io.Serializable interface.
+	-> Purpose of Serialization : 
+		1. Object Persistence: 
+			-> Serialization allows us to save the state of an objects(its instance varibales) to a 			file. Later on, we can deserilize the file to recreate the original object with its 				preserved state.
+		2. Data Transmission:
+			-> Serialized objects can be easily transmitted/ sent over a network or between multiple 			java applications. USeful in client-server communication or even in the distributed 				system.	
+
+10.4 : Object serialization, transient
+	-> transient variables :
+		-> these variables are not serialized during serialization 
+		-> they retain their original/ default values.
+
+10.5 : Wrapper Classes
+	-> the techniques to convert primitive type into its respective object type and object type to its 	respective primitve type.
+	-> We have following wrapper classes : 
+			
+		primitive type					wrapper class
+
+		int 						Integer
+		byte 						Byte
+		short 						Short
+		long						Long
+		float						Float
+		double						Double
+		char						Character
+		boolean						Boolean
+		
+10.6 : Autoboxing and Unboxing
+	-> Autoboxing refers to automatically converting the primitive type to Wrapper class type
+
+
+	-> Unboxing refers to conversion of Wrapper Class object type to primitive type
+
+
+
+//////////////------------------- 4-May-2024 ------------------
+Topic 11 : Collection framework and Lambda Expression
+11.1 : Introduction to Collection
+	-> an internal java framework which provides a set of predefined classes and interfaces to use and 	manipulate group of objects
+	-> To efficiently use these set of objects collection provides lists, sets, maps, queues, etc.
+	-> Important components of the collection framework : 
+		Interfaces
+			-> Collection<E>
+				|
+			    List<E>	: 	represents ordered collection of elements
+						allows duplicate values
+						examples: ArrayList, LinkedList, Vector
+			    Set<E>	:	represents collection of unordered elements
+						elements must be unique.
+						examples: HashSet, LinkedHashSet, TreeSet
+			    Queue<E>	:	represents ordered collection of elements
+						allows duplicate values
+						examples: PriorityQueue 
+			    Map<K, V>	:	represents key-value pair where value can be duplicated but 
+						key must be unique
+						examples: HashMap, LinkedHashMap, TreeMap	
+
+		Classes
+			-> ArrayList<E>
+			-> LinkedList<E>
+			-> HashSet<E>
+			-> HashMap<K, V>
+
+
+		Utitlites
+			-> Collections : sort, shuffle, reverse
+			-> Array : asList, sort	
+
+11.2 : Collection Hierarchy
+					
+					java.lang.Object
+						|
+						|
+					java.util.Collection
+				----------------|----------------------------------------	
+				|				|				|	
+			java.util.List			java.util.Set			java.util.Queue
+				|				|				|
+			java.util.ArrayList		java.util.HashSet		java.util.PriorityQueue
+			java.util.LinkedList		java.util.LinkedHashSet
+			java.util.Vector		java.util.TreeSet
+			.
+			.
+
+
+11.3 : working with ArrayList, LinkedList, HashSet, LinkedHashSet, TreeSet, Queue, Dequeue, Stack
+	-> How to create collection objects
+	-> syntax : 
+		
+		CollectionClassName<Type> object = new CollectionClassName<>();
+
+	-> example:
+		
+		ArrayList<String> fruits = new ArrayList<>();
+	
+
+11.4 : Maps - HashMap, LinkedHashMap, TreeMap
+
+//////////// ------------------- 5-May-2024 ----------------------
+Queue example
+Stack example 
+
+11.5 : Using Iterators and Enumerations, ListIterator, forEach()
+	-> Iterators are nothing but cursors which points to the element of the collection one by one and 	retrieves them
+	-> Enumerations : they are collection type to create a collection where only fixed values can be added.
+
+11.6 : Generics : 
+	-> With non-generic type of collection we never specified the type of data object it hold
+	-> With generics we specify the type of data object to be held in the collection
+
+	-> Non generics example : 
+
+		ArrayList fruits = new ArrayList();
+
+	-> generics example : 
+
+		ArrayList<String> fruits = new ArrayList<>();
+
+11.7 : Comparable and Comparators
+	-> Comparable : 
+		-> it is an interface used to define a natural ordering for the collection based class.
+		-> A class objects will be compared with each other and sorted.
+		 
+/////////////// -------------------- 11-May-2024 ----------------------
+	-> Comparator Interface : 
+		-> it is an interface used to define a natural ordering for the collection based class.
+		
+		* We can use multiple comparators for a class of collection to sort it using multiple parameters
+		* Comparable is only one for a class of collection
+
+Functional Interfaces - Lambda Expressions
+	-> used to write long methods into short hand methods or we can create anonymous methods
+
+Streams - Sequential, Parallel
+	-> Streams provides a powerful way to process collections of data in a functional way
+	-> Java streams can be executed sequentially or parallelly.
+	-> Executing/ Processing a large data set over a single core processor would be less efficient
+	-> so, we can opt for multicore processor to get improved performance, especially when dealing with larger 	dataset. 
+
+Filtering Collections
+
+
+task : 
+Word count and writing the word count to different file
+
+	file1.txt					file2.txt
+Hello all and welcome to java.				total alphabets : 30
+							total alphabets without space : 25
+							total number of words : 6
+				
+////////////// ----------------------- 12-May-2024 -----------------------
+
+Topic 12 : Multi-Threading
+12.1 : Introduction Multi-Threading
+	-> Multithreading allows us to execute concurrent threads/ multiple threads within same process.
+	-> Thus allowing the application to perform multiple tasks simultaneously, improving the performance as 	well as the responsiveness of the application.
+	-> It is achieved using Thread classes and Runnable interfaces from the java.lang package.
+	-> Thread : is the smallest unit of execution within a process
+	-> There are two ways by which we can create threads : 
+		1. by extending Thread class			------->--|
+									run()
+		2. by implementing the Runnable interface	------->--|
+
+
+12.2 : Thread Life Cycle
+	-> The Thread life cycle represents the various states that a thread can be in during its execution.
+	-> In java the thread can be in one of the several states transitioning from one state to another based 	on its execution and interaction with the os/ user.
+	-> Following are the states : 
+	1. New state
+		-> When the tread instance is created but the start() is not invoked yet.
+		-> the thread is not considered alive until start() is called.
+
+	2. Runnable 
+		-> The thread is ready to run and waiting for CPU time.
+		-> once the start() is called, the thread enters the runnable state.
+
+	3. Blocked/waiting 
+		-> The thread may be blocked by any lock, other thread execution.
+
+	4. Terminated
+		-> The thread has completed its execution(run method has completed its task) 
+		-> the thread may be terminated due to an uncaught exception
+		-> Once a thread is terminated, it can not be restarted.
+
+12.3 : Thread Class vs Runnable Interface
+	-> Thread class
+		-> This approach directly creates a thread subclass
+		-> tightly coupling the thread's behaviour with its identity
+		-> simple to create
+		-> directly created for the custom use cases thread behavior required
+		-> the class extending from Thread class will not be able to extend to another class
+		-> less reusable
+		
+	-> Runnable interface
+		-> We need to create the class with runnable interface and then pass the object to Thread class
+		-> An additional step is required to convert the class implementing runnable to Thread class
+		-> flexible allows for inheritance
+		-> reusable 
+		-> requires more code than Thread type
+		-> Creates thread, but indirectly
+
+	* the Runnable interface is chosen/ preferred over Thread class for better flexibility, code 	reusability, good code organization etc.
+
+12.4 : Synchronized Methods, Block
+
+/////////////// -------------------- 18-May-2024 ------------------
+
+12.5 : Daemon Thread
+	-> It is a Thread that is a background thread designed to run in background and perform tasks like 	garbage collection, housekeeping, monitoring etc	
+	-> The main feature of daemon thread is that they do not prevent the JVM from exiting when all the user 	threads have finished execution.
+ 	-> When the user threads have finished execution, regardless of daemon thread state, the JVM is exited.
+	-> If only daemon threads are available in JVM then the daemon threads terminate.
+
+Topic 13 : Java New Features
+-> Before Java 8: 
+	-> classes : Date, Calendar, TimeZone 
+	-> basic data formatting
+	-> they were not thread safe
+	-> they did not provide basic day-to-day functionalities	
+	-> the developers were supposed to write logic for handling the time zones
+
+-> After Java 8:
+	-> these drawbacks were resolved/ handled
+	-> LocalDate, LocalTime, LocalDateTime, ZonedDateTime, Clock, Duration, Period, 	ZoneId,DateTimeFormatter 
+
+-> HttpCLient API : 
+	-> providing the mechanism to send synchronous/ asynchronous requests to the server and get the 	response back.
+	-> Three core classes : 
+		1. HttpRequest
+		2. HttpClient
+		3. HttpResponse 
+
+
+
+////////////-------------------- 19-May-2024 ------------------
+Collection based employee managememt system
+
+
+	1. Add Employee
+	2. View All Employees
+	3. Update Employee
+	4. Delete an Employee
+
+
+************************* Spring Boot Framework ********************
+///////////// ------------------ 1-June-2024 ----------------------
+
+Topic 1 : Introduction To Spring Core
+	-> What is a framework ? 
+		-> A framework is a conceptual structure or a software platform used to build and deploy an 		application. Frameworks are designed to simplify the development process by providing many 		useful artifacts like predefined libraries, modules, reusable code sets, toolsets, best 		practices for solving common challenges and tasks required by the application.
+		-> In simple terms, under one roof we get the presentation logic, database transactions, 		business logic development.
+		-> Following are some of the examples of widely used frameworks based on their purpose and 		scope: 
+			1. Web Application Frameworks
+				-> Spring, Flask, Django, Angular
+
+			2. Mobile Application Frameworks
+				-> React Native, Flutter, Xamarin
+			
+			3. Game Development Frameworks
+				-> Unity(C#), Unreal Engine(C++)
+
+			4. Data Science and Machine Learning Frameworks
+				-> TensorFlow, PyTorch, Sci-Kit
+
+	-> What is Spring Framework ?
+		-> Spring Framework is open-source application framework based on Inversion of control 			container mechanism for java platform.
+		-> Provides a comprehensive programming and configuration model for modern java based 			enterprise application development.
+		-> Enables developers build more scalable, maintainable, testable and robust applications.
+		-> Common features of Spring Framework:
+			1. Dependency Injection and IoC container
+				-> Spring provides the Inversion Of Control container to manage the 					instantiation and life cycle of an object and also their dependencies. 
+				-> It thus promotes loose coupling and testability. 
+
+			2. Aspect Oriented Programming
+				-> Spring's AOP module provides a clean way to implement cross-cutting concerns
+				like logging functionality, security aspect, database transactions management 				without tangling the core business logic.
+
+			3. Web Frameworks
+				-> Within spring roof we have frameworks for building web applications like 				Spring MVC for traditional web applications, Spring WebFlux for reactive 				programming, Spring Boot for rapid development of web based+ REST based 				application.
+
+			4. Data Access and Integration
+				-> Spring provides support for various data access technologies like JDBC, ORM 				tools like Hibernate, JPA; 
+				-> Spring also provides data integration techniques for  working with data 				sources like MySQL, h2 database, redis, oracle, mongodb
+
+			5. Authentication and Authorization
+				-> Spring Security is a powerful and highly customizable framework for securing 				web applications providing authentication and authorization.
+
+			6. Testing Support 
+				-> Spring provides unit testing and integration testing utilities.
+				-> We can use junit, TestNg here
+
+			7. Messaging and Integration
+				-> This can be used to enable asynchronous communication between applications
+				-> JMS : Java Message Service
+				-> AMQP : Advanced Message Queuing Protocol 
+
+			8. Batch Processing
+				-> Spring Batch provides robust framework to develop batch applications. 
+				-> It helps is reducing overheads with/ simplifying tasks like reading data 				from files, databases, processing data, writing data to files, databases
+
+1.1 : IoC Container
+	-> An IoC container is a core component of the spring framework and other frameworks which are 	dependency injection based.
+	-> It is responsible for creation of objects and managing their lifecycle and dependencies.
+	-> The main focus of IoC is to achieve loose coupling between components by separating the 	responsibility of object creation from the objects themselves.
+	-> Instead of creating the objects directly within the application code, the creation and wiring of 	objects is delegated to IoC Containers.
+ 	-> Working : 
+		1. Configuration
+			-> Developers will define the application objects/ beans and their dependencies in a 			configuration file(XML or Java Annotation)
+			-> This files specified how the object should be created, what dependency the object 			requires, and also how to resolve those dependencies
+
+		2. Object Instantiation	
+			-> During the application execution/ startup or runtime, the IoC container reads the 			configuration metadata and creates instances of the configured objects.
+			-> It also resolves any dependencies that these objects might have by creating the 			instances of the dependencies as well.
+
+		3. Dependency Injection
+			-> Once the objects and their dependencies are instantiated, the IoC container will 			inject/ wire the appropriate dependency with the required object for usage in the 			application.
+			-> this wiring of dependency with the objects is the key principle behind the IoC 			pattern. 
+	
+		4. Object Management
+			-> The entire lifecycle of the object creation-> initialization-> destruction-> scope 			are managed by the IoC
+
+	-> By using IoC technique, the developers can :	
+		1. Decouple Components :
+			-> Objects no longer need to create or manage their dependencies directly
+			-> promotes loose coupling
+			-> enhances better code organization
+
+		2. Improve Testability
+			-> dependencies can be easily mocked or replaced during testing thus enabling better 			unit and integration testing
+
+		3. Centralize Configuration
+			-> Object configurations are externalized and centralized, thus making it easier to 			manage and modify the dependencies without hampering the actual application code logic.
+
+		4. Promotes best practices
+			-> IoC enables using patterns like Dependency Injection, Single Responsibility 				Principle leading to more maintainable and extensible code.
+		
+	-> IoC Container = Spring Containers = ApplicationContext 
+
+
+		Appplciation
+		
+		Fruits f = new Fruits --- invalid
+		MyApp(Fruits f);
+			------------------------------------------->	xml/annotated
+									Fruits object
+
+1.2 : Beans Overview
+	-> In Spring Framework, beans are the fundamental units of deployment and configuration.
+	-> A bean refers to an object which is instantiated, assembled, managed by the IoC container.
+	-> Beans can represent following types of objects : 
+		1. Application components
+			-> service, classes, data access objects, controllers
+
+		2. Third-Party dependencies
+			-> external dependencies like database connection pools, messaging services
+
+		3. Infrastructure objects
+			-> transactions managers, view resolvers, message listeners
+
+	-> Beans in spring can have following scope : 
+		1. Singleton -> only one instance is created and shared across entire application
+		2. Prototype -> New instance of bean is created every time it is requested
+		3. Request, Session, Application -> web based scope, determines the life cycle of a bean for 						    http request, session, application.
+
+
+///////////////// ------------------- 2-June-2024 ---------------------
+1.3 : Dependency Injection
+	-> DI is a fundamental principle of oop that decouples the creation of objects and binding of objects 	from those objects that use them.
+	-> The main idea behind the use of DI is  rather than creating/instantiating an object and its 	dependencies directly in the logical code, they can be injected/ provided/ added to the required object 	from an external source/ XML file/ IoC container/ ApplicationContext
+ 	-> This promotes loose coupling, testability and modularity of the application
+	-> Three main types of DI : 
+		1. Constructor Injection
+			-> here the dependencies are provided to the objects are provided through constructor.
+			-> The IoC creates the objects instance and injects the dependencies through 				constructor
+
+			-> example : 
+
+			public class EmployeeService{
+
+				private final EmpRepository empRepository;
+
+				public EmployeeService(EmpRepository empRepository){
+					this.empRepository = empRepository;	
+				}
+			}
+
+
+		2. Setter Injection
+			-> here the dependencies are provided to the objects through the setter methods.
+			-> The IoC create the objects instance and then calls the setter method to inject the 			dependencies
+			
+
+			-> example : 
+
+			public class EmployeeService{
+				
+				private final EmpRepository empRepository;
+
+				public void setEmpRepository(EmpRepository empRepository){
+					this.empRepository = empRepository;
+				}
+			}
+
+		3. Field Injection
+			-> here the dependencies are directly injected to the object's fields.
+			-> The IoC container creates the object instance and injects the dependencies by 			setting the field value directly.
+
+			-> example: 
+
+			public class EmployeeService{
+				
+				@Autowired
+				private EmpRepository empRepository;
+
+			}
+
+1.4 : AOP 
+	-> Aspect-Oriented Programming is a programming paradigm aims to increase modularity within an 	application by separating the cross-cutting concerns from the core business logic.
+	-> Cross-cutting concerns are simply the common functionalities like logging mechanism, security, 	transactions management, exception handling mechanisms 
+
+	-> In traditional programming we used to club these things with the core logic of the application due 	to which the codes length increased, boiler-plate code in code base, hard to maintain. 
+	-> Aop addresses this issue by providing a way to modularize the cross-cutting concerns into separate 	units and they are called as aspects.
+
+	-> Key terminologies : 
+		1. Aspect	:	cross-cutting concerns -> logging
+		2. Join Point	:	point of execution -> method, constructor call,  field access
+		3. Advice	: 	code that is supposed to be executed at joinpoint
+					Before advice, After Advice, Around Advice
+		4. Pointcut	: 	expression of set of join points
+		5. Weaving 	:	process of applying aspects to target objects by linking the advices to 					proper join points
+
+
+Topic 2 : Spring MVC And Spring Boot
+	-> MVC : Model View Controller
+	-> MVC pattern separates the application's data, user interface and control logic into three 	interconnected components : model, view, controller.
+
+2.1 : Spring MVC 
+	-> It is a web application framework used to develop web applications with RESTful Services.
+	-> It is based on the MVC architectural pattern for designing and developing the application.
+	-> Key components of Spring MVC : 
+		1. DispatcherServlet
+			-> Is the front controller of the SPring MVC framework
+			-> It acts as a focal point/ entry point for all the incoming http requests and is 			responsible for delegating the requests to appropriate controller for execution 
+			-> It is configure in the web.xml file
+
+		2. Controller
+			-> Is responsible for handling incoming requests and preparing a model for view to 			render
+			-> it processes the user input, interacts with the business layer/ services and also 			prepares the data to be displayed to specific view.
+
+		3. Model 
+			-> Represents the data that is transferred between the controller and the view. 
+			-> This data can be as simple as a value or complex data containing from various 			sources like databases, services.
+
+		4. View
+			-> The view is responsible for rendering the model data to users in a userfriendly 			format, typically the HTML format
+			-> spring supports various view technologies like  JSP, Thymeleaf, Freemaker
+
+		5. ViewResolver
+			-> The only responsibility of the ViewResolver is to map the logical view names 			returned by the controller to the actual view resources.
+
+2.2 : Request-Response Life Cycle
+	1. The client/ web browser sends an http request to the server
+	2. the dispatcherservlet receive the request and consults the handler mapping to determine which 	controller should be handling the request.
+	3. The dispatcherservlet invokes the appropriate controller methods, passing in the request and 	response objects.
+	4. The controller methods if determined its job is to process the request, interact with the business 	logic layer and prepares the data model
+	5. The controller will return the logical view name to dispatcherservlet
+	6. The dispatcherservlet consults the viewresolver to map the retunred logical name to the appropriate 	view name
+	7. The view render the model data and generates the appropriate response. 
+	8. The dispatcherservlet sends the response back to the client.
+
+2.3 : Tools
+	-> Core java
+	-> Eclipse/ Spring Tool Suite
+	-> Maven 
+
+2.5 : Maven -> maven commands
+	-> It is a popular build automation tool used to primarily develop/ deploy java based projects.
+	-> It is open source + hosted by apache foundation
+	-> Main purpose : 
+		1. Project Building
+			-> It will handle the entire lifecycle of a project : compiling source code, running 			tests, packaging the code into jar/ war format, installing dependencies, deployment to 			localhost.
+
+		2. Dependency Management
+			-> it manages the dependencies required by the application being build.
+			-> inside pom.xml all the dependencies will be mentioned, it will download all of them 			from remote repositories which are compatible with the project.
+
+		3. Project Documentation
+			-> can generate project documentation -> api docs. website docs, reports on code 			quality, any other metrics
+			
+		4. release Management
+			-> provides tools for managing the releases including versioning, tagging, deploying to 			remote repositories
+
+
+
+////////////// ------------------ 8-June-2024 --------------------
+Topic 3 : Introudction To Pet Store with Spring Boot
+3.1 : Introduction To Petstore Project
+	-> Core Features that we can implement in the pet store project : 
+	1. Pet Management
+		-> Add, Update, Delete, View Pets
+		-> Categorize the pets by type(cat, dog, bird) etc
+
+	2. Product Management(Pet Products)
+		-> Add, Update, Delete, View products
+		-> Categorize the products by type(food, medicine, cosmetic, toys)
+
+	3. Customer Management
+		-> Add, Update, Delete, View Customer
+		-> Customer registration and login
+		-> Manage profile of every customer
+
+	4. Order Management
+		-> Create, update, delete and view orders
+		-> Track order status -> completed, pending, cancelled
+		
+	5. Stock Management
+		-> Track the available pets
+		-> Track the available products
+		-> Update the stock ones pets or products are sold.
+
+	6. User Authentication and Authorization
+		-> Implement login and registration
+		-> put access control to the application -> admin, customer
+
+	7. Payment Processing
+		-> Simulate the payment processing 
+		-> Integrate the payment gateway in our application(Razorpay)
+ 
+	8. Search
+		-> Search the pets, products by various criteria
+
+	9. RESTFul API 
+		-> expose the endpoints for all operations
+
+3.2 : SDLC : 
+	-> Software Development LifeCycle is a structured/formatted approach used to develop software 	applciations. This process outlines various stages involved in developing an application ensuring that 	the software is produced systematically and also meets the requirements stated by the client/ customer/ 	stakeholder.
+	-> Phases/ Stages of SDLC : 
+	1. Planning
+		-> defines the scope and purpose of the project
+		-> create a project plan 
+		-> identify risks + develop mitigation strategies
+		-> develop a project schedule + allocation of resources
+
+	2. Requirement Analysis
+		-> Gather detailed requirements from the stakeholders + document them
+		-> conduct review meetings, surveys, workshops etc
+		-> create detailed specification about the requirements and use cases
+		-> validate the requirements with end-user/ stakeholders to make sure accuracy + completeness 		of requirements
+
+	3. Design
+		-> Transformation of the stated requirements into a detailed design specification 
+		-> develop architectural diagrams
+		-> design database schema/ diagrams
+		-> detailed design for every component and module in the application
+		-> user interfaces can be designed
+		-> document the design specification and also validate it with stakeholders
+
+	4. Implementation or Coding
+		-> Translating the design document into functional/ shippable code
+		-> set up the development environment first
+		-> Create/ Write code according to the design specification
+		-> conduct reviews to adhere to coding standards
+		-> we can perform unit testing to ensure that individual components function properly
+		
+	5. Testing
+		-> Verify that the software application build meets the requirements stated and also we need to 		find defects.
+		-> develop test plan and test cases
+		-> various testing techniques can be used to perform testing 
+		-> record the issues/defects found
+		-> fix them then retest them
+		
+	6. Deployment
+		-> Release the software to production environment.
+		-> setup production environment
+		-> deploy the software to production
+		-> conduct final testing 
+		-> train the end-users + provide necessary documentation for usage
+
+	7. Maintenance and Support 
+		-> Provide an ongoing support and maintenance for the software
+		-> monitor the software performance
+		-> Address the bugs/ defects found
+		-> if feedback for updates/ enhancements are given then we need to implement it
+		-> regular maintenance tasks
+		-> smooth and efficient operation of the software
+
+3.3 : Agile Methodology :
+	-> It is an iterative and incremental approach for developing a software application.
+	-> It majorly emphasizes on flexibility, collaboration, customer feedback and rapid delivery.
+	-> It is designed to accommodate changes and deliver small, functional blocks of software frequently.
+	-> Several frameworks implement this technique of agile : 
+		1. Scrum	->	Focusses on delivering small, shippable increments of work in time-					boxed iterations called sprint
+		2. Kanban	-> 	Kanban board where the work process is visualized + continuous delivery 					and efficiency
+		3. XP -> Extreme Programming	->	technical practices + engineering discipline -> pair 				programming, test-driven development, continuous integration
+
+3.4 : Scrum
+	-> Role 
+		-> Product Owner
+			-> Represents the stakeholders, defines the product backlog items and prioritize them
+
+		-> Scrum Master
+			-> One who facilitates the Scrum Process, ensures that the team adheres to agile 			principles and removes any impediments
+
+		-> Development Team
+			-> Self-organizing and cross-functional team which deliver the product increment
+
+	-> Artifacts
+		-> Product Backlog 
+			-> A prioritized list of features, enhancements, bug fixes to be delivered.
+
+		-> Sprint Backlog
+			-> A sprint backlog focusses on the specific product backlog items that are supposed to 			be built in the current sprint.
+
+		-> Increment
+			-> The sum of all completed product backlog items at the end of sprint.
+
+	-> Events
+		-> Sprint Planning
+			-> A meeting to define the sprint goals + selecting backlog items for building to be 			build in current sprint
+
+		-> Daily Scrum
+			-> A sort daily meeting (15-20minutes) for the team to synchronize activites and plan 			for the next 24 hours tasks.
+
+		-> Sprint Review
+			-> A meeting post sprint completion with the stakeholders to demonstrate the work done.
+			-> feedback from the stakeholders is gathered for further refinement in the application
+
+		-> Sprint Retrospection
+			-> A meeting at the end of the sprint for the team to reflect on the sprint process and 			identify the areas of improvements
+
+3.5 : Introduction To JIRA
+	-> Popular project management tool
+	-> issues can be tracked
+
+	-> developed by Atlassian
+	-> widely used in agile software development where tasks like planning, tracking, managing the project 	can be done effectively
+
+
+//////////// ------------------- 9-June-2024 ---------------------
+Topic 4 : Creating and running spring boot applications
+4.1 : Download and Install Spring ToolSuite
+4.2 : Creating application
+4.3 : Observing properties files
+4.4 : Committing project to GitHub
+
+
+
+///////////// ------------------ 15-June-2024 --------------------
+Topic 5 : Creating REST API
+5.1 : What is REST : 
+	-> Representational State Transfer 
+	-> a mechanism/ architectural style used to develop networked application
+	-> REST depends upon the HTTP protocol -> communication protocol, data transfer over web, stateless
+	-> The RESTful applications uses HTTP requests to perform the CRUD operations wrt the application over 	net
+	-> These operations can be identified over net using the URI(Uniform Resource Identifiers)
+
+	-> Key principles : 
+		1. Stateless
+			-> Each request made to client will contain all the information required by the server 			to process the request.
+			-> On the other hand, server will not keep track/ store/ save the work by the client
+
+		2. Client-Server Architecture
+			-> The client and server are two separate entities which interacts with each other for 			data transfer/ information exchange/ any other sort of business communication etc.
+			-> This sort of separation allows for independent development, improvement and scaling 			of the application.
+
+		3. Cacheable
+			-> Responses from the server can be marked as cacheable or non-cacheable to improve the 			performance by reducing the number of client-server interaction.
+		
+		4. Uniform Interface
+			-> REST defines four interface constraints:
+			1. Identification of the Resource
+			2. Manipulation of the Resources through representation
+			3. Self-descriptive messages
+			4. Hypermedia as the Engine Of Application Sate(HATEOAS)
+		
+		5. Layered System
+			-> This architecture allows for an intermediary like a proxy server to improve 				scalability, security, encapsulation without the client being aware of any intermediary 			server. 
+		
+		6. Key components of REST: 
+			1. Resource	
+				-> Basically any information that can be named, such as a document, image, 				audio-video, temporal service, collection of resources - tabular information or 				any non-virtual object(Person, Product, Stock, Order, Customer)
+			
+			2. Resource Representation
+				-> Resources are represented usually in JSON/XML format 
+				-> They contain data as well as metadata about the resource
+
+			3. URI
+				-> Each resource is identified by a unique URI
+
+			4. HTTP Methods : 
+				-> RESTful services uses the following HTTP methods :
+				1. GET		:	Retrieving the resource		
+				2. POST		:	Create a new Resource
+				3. PUT		:	Update an existing Resource	
+				4. DELETE	:	Delete/ Remove an existing Resource
+				5. PATCH	:	Partially Update an existing Resource
+
+			5. HTTP Status code/ message : 
+				-> Status codes helps in indicating the result of an operation:		
+				1. 200 OK		-> Request was successful
+				2. 201 Created		-> A new resource created successfully
+				3. 204 No Content	-> Request was successful but there is no content for 							the request
+				4. 400 Bad Request	-> Request with invalid syntax not understandable by 							server
+				5. 401 Unauthorized	-> Client must be authenticated to get requested 							response
+				6. 403 Forbidden	-> Client does not have the rights to the specified 							content
+				7. 404 Not Found	-> Server could not find the requested resource.
+				8. 500 Internal Server Error -> The server encountered a situation about which 							it has no understanding and it doesn't know how to 							handle it.
+
+			Example : Resource -> Person
+			Restful APIS for person : 
+			1. GET/api/persons		:	Retrieve all persons
+			2. POST/api/persons		:	Create a new Persons
+			3. GET/api/persons/{id}		:	Retrieve a person by id
+			4. PUT/api/persons/{id}		:	Update a person by id
+			5. DELETE/api/persons/{id}	:	Remove a person by id
+
+5.2 : Creating our first REST API
+5.3 : Adding DevTools
+5.4 : Creating Service File for product resource 
+5.5 : Creating REST Controller to perform CRUD operations on Product Resource
+5.6 : Consuming the REST API using any rest client like Postman
+
+///////////// -------------------- 16-June-2024 --------------------
+Theory about DevTools and Postman : 
+	1. Devtools : 
+		-> Spring boot devtools is a module which enhances the development experience by providing set 		of features that can help developers to be more productive.
+		-> It includes capabalities like automatic restart of the application, live reload, automatic 		configuration of dependencies, remote restart etc
+		-> Key points : 
+		1. Automatic Restart:
+			-> It allows to restart the application whenever during execution period some changes 			in code are made. Thus making the changes made during execution to be detected 				automatically.  
+			-> It saves the time required for manual stopping the execution and again restarting 			the application execution.
+ 
+		2. Live Reload:
+			-> When using the IDE tools, the devtools can trigger a browser refresh whenever a 			resource change is detected.
+			-> This means that after changing the frontend files like html/ css/ javascript, these 			changes will be automatically reflected on the browser.
+
+		3. Automatic Configuration:
+			-> Devtools automatically configure certain settings to be more suitable for the 			development. Like it can disable template caching, enable debug logging for SQL etc
+
+		4. Global Settings:
+			-> Devtools allows us to have global settings for the springboot projects.
+			-> for example, we can set the properties in spring-boot-devtools.properties file in 			home directory which will apply the desired changes to all the projects containing 			devtools module.
+
+		5. Remote Restart: 
+			-> Devtools supports remote restart for applications running on a remote server.
+			-> This is useful when working with remote environments or when collaborating with 			others who are not available on the same local network.
+
+	2. Postman : 
+		-> Postman is a popular tool for testing, debugging the REST APIs. 
+		-> It provides a user-friendly interface that allows developers to send HTTP requests(Pots, 		Get, Put, Delete etc) to a server and also view the responses. 
+		-> If any issues observed, proper error messages as per HTTP are also shown here. 
+		-> Postman makes it easy to test the rest api functionality.
+	
+
+5.7 : Commit everything done to GitHub and mark tasks done on JIRA
+
+
+
+
